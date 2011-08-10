@@ -18,6 +18,12 @@ class GUI : public QWidget{
 	Q_OBJECT
 
 public:
+	/**
+	  * \brief GUI Interface for iCharger do the whole handling of the device and data acquisition
+	  * This Function opens the port and initializatioes an thread for data reading
+	  * \param port port of the device
+	  * \param partent Parent Widget, 0 otherwise (qt-default)
+	  */
 	GUI(const char *port,QWidget *parent=0);
 	~GUI();
 

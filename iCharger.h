@@ -1,5 +1,5 @@
-#ifndef _IFGINTERFACE_H_
-#define _IFGINTERFACE_H_ 
+#ifndef _ICHARGER_H_
+#define _ICHARGER_H_ 
 
 #include <iodrivers_base.hh>
 #include <unistd.h>
@@ -41,6 +41,10 @@ public:
 		}
 };
 
+
+/**
+  * Driver for the iCharger Battery Charger
+  */
 class Driver: public IODriver 
 {
 
@@ -49,10 +53,23 @@ public:
 	Driver();
 	~Driver();
 	int getReadFD();
-	bool init(std::string const &port,bool const doLogging=false);
+	
 	/**
-	 * Returns the rotation value in radians
-	 */
+	  * \brief Initialization
+	  * This Function initializatze the Driver and trys to open the port
+	  * Optional Logging can be activated, for logging details see sourcecode for now
+	  * \param port Unix portname of the device
+	  * \param doLogging Activate Textual Logging (e.g. used for gnuplot)
+	  * \return true if port could opened sucsessfully
+	  */
+	bool init(std::string const &port,bool const doLogging=false);
+
+	/**
+	  * \brief Getting the Data
+	  * This Function should be called periodicly to acquire the Data, tha Data will returned throught the parameter delta
+	  * \param delta The Readed Values
+	  * \return true if data are sucsessfully readed
+	  */
 	bool getData(Data &delta);
 
 private:

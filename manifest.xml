@@ -1,0 +1,12 @@
+<package>
+  <description brief="Driver for the 'iCharger' battery Charger">
+  	This Package contains an driver and gui application for viewing and recording data from the Charger
+  </description>
+  <author>Matthias Goldhoorn/matthias.goldhoorn@dfki.de</author>
+  <copyright>
+      DFKI/robotik@dfki.de
+  </copyright>
+  <license>LGPL v2 or later</license>
+  <depend package="drivers/iodrivers_base" />
+</package>
+
