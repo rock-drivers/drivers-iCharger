@@ -18,10 +18,11 @@ class GUI : public QWidget{
 	Q_OBJECT
 
 public:
-	GUI(QWidget *parent=0);
+	GUI(const char *port,QWidget *parent=0);
 	~GUI();
 
 private:
+	const char *port;
 	Driver *driver;
 	Ui_iCharger *ui;
 	std::vector<double> currentValues;

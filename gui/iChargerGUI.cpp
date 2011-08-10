@@ -5,11 +5,12 @@
 
 namespace iCharger{
 
-GUI::GUI(QWidget *parent):
+GUI::GUI(const char *port, QWidget *parent):
+	port(port),
 	QWidget(parent)
 {
 	driver = new Driver();
-	driver->init("/dev/ttyUSB0",true);
+	driver->init(port,true);
 	ui = new Ui_iCharger();
 	ui->setupUi(this);
 	show();
