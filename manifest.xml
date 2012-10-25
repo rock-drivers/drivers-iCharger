@@ -8,5 +8,7 @@
   </copyright>
   <license>LGPL v2 or later</license>
   <depend package="drivers/iodrivers_base" />
+  <depend package="qt4" />
+  <depend package="qwt5" />
 </package>
 
