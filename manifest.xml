@@ -3,6 +3,7 @@
   	This Package contains an driver and gui application for viewing and recording data from the Charger
   </description>
   <author>Matthias Goldhoorn/matthias.goldhoorn@dfki.de</author>
+  <maintainer>Matthias Goldhoorn/matthias.goldhoorn@uni-bremen.de</maintainer>
   <copyright>
       DFKI/robotik@dfki.de
   </copyright>
